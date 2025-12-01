@@ -1,5 +1,5 @@
 {% set name = "nexus-rpc" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nexus_rpc-{{ version }}.tar.gz
-  sha256: d65ad6a2f54f14e53ebe39ee30555eaeb894102437125733fb13034a04a44553
+  sha256: b4ddaffa4d3996aaeadf49b80dfcdfbca48fe4cb616defaf3b3c5c2c8fc61890
 
 build:
   noarch: python
