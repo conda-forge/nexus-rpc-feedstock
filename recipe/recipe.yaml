@@ -19,15 +19,16 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python ${{ python_min }}.*
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >=${{ python_min }}
     - typing_extensions >=4.12.2
 
 tests:
   - python:
+      python_version: ${{ python_min }}.*
       imports:
         - nexusrpc
       pip_check: true
