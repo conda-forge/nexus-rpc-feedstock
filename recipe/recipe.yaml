@@ -29,7 +29,7 @@ requirements:
 tests:
   - python:
       imports:
-        - nexus_rpc
+        - nexusrpc
       pip_check: true
 
 about:
