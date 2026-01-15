@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: nexus-rpc
+  version: 1.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/nexus_rpc-${{ version }}.tar.gz
+  sha256: b4ddaffa4d3996aaeadf49b80dfcdfbca48fe4cb616defaf3b3c5c2c8fc61890
+
+build:
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
+
+requirements:
+  host:
+    - python >=3.10
+    - hatchling
+    - pip
+  run:
+    - python >=3.10
+    - typing_extensions >=4.12.2
+
+tests:
+  - python:
+      imports:
+        - nexus_rpc
+      pip_check: true
+
+about:
+  homepage: https://github.com/nexus-rpc/sdk-python
+  summary: Nexus Python SDK
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - dgasmith
+    - nic-chira
+    - chrisjryan
+    - fzding
+    - chrisdeutsch
