@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: nexus-rpc
-  version: "1.5.0"
+  version: "1.6.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/nexus_rpc-${{ version }}.tar.gz
-  sha256: be2d6934414677bc9dd8e571fb5106c22b8769edc19562c3f49d9988edd24e1c
+  sha256: c1981fb45ef42dd46529035d5fa5fd6748cbfbd4428fc9d3a0c1acb559e708e2
 
 build:
   noarch: python
